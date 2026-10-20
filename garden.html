@@ -158,6 +158,9 @@
 </head>
 <body>
   <main class="garden" id="garden">
+    <a class="back-home" href="./index.html">
+  ← Quay lại
+</a>
     <header class="page-header">
       <p class="dedication">Dành em, cả một vườn thương.</p>
       <p class="date"><span>20 / 10</span>Ngày Phụ nữ Việt Nam</p>
@@ -537,7 +540,7 @@
       resize();
     })();
   </script>
-<audio id="bgm" src="./assets/lifgo.mp3" loop preload="metadata"></audio>
+<audio id="bgm" src="./assets/lifegoesonbts.mp3" loop preload="metadata"></audio>
 <button id="musicBtn" type="button" aria-label="Bật nhạc">♪ Bật nhạc</button>
 
 <style>
@@ -603,19 +606,31 @@
     resume();
   })();
 </script>
-<a id="backBtn" href="./index.html">← Về bó hoa</a>
 <style>
-  #backBtn {
-    position: fixed;
-    z-index: 9999;
-    padding: 10px 16px;
-    border: 1px solid rgba(160, 70, 100, 0.25);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.85);
-    color: #7a3550;
-    font-size: 14px;
-    text-decoration: none;
-  }
+.back-home {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 18px;
+  border: 1px solid #e8bfd0;
+  border-radius: 30px;
+  background: rgba(255, 253, 252, 0.94);
+  color: #8b4963;
+  font-family: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  box-shadow: 0 3px 14px rgba(139, 73, 99, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-home:hover {
+  background: #fae7ef;
+  transform: translateY(-2px);
+}
 </style>
 </body>
 </html>
