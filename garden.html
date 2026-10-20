@@ -537,5 +537,85 @@
       resize();
     })();
   </script>
+<audio id="bgm" src="./assets/lifgo.mp3" loop preload="metadata"></audio>
+<button id="musicBtn" type="button" aria-label="Bật nhạc">♪ Bật nhạc</button>
+
+<style>
+  #musicBtn {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 50;
+    padding: 10px 16px;
+    border: 1px solid rgba(160, 70, 100, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #7a3550;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  (function () {
+    var audio = document.getElementById("bgm");
+    var btn = document.getElementById("musicBtn");
+    var KEY = "bgmState";
+
+    function label(on) {
+      btn.textContent = on ? "♪ Tắt nhạc" : "♪ Bật nhạc";
+    }
+
+    function save() {
+      try {
+        sessionStorage.setItem(KEY, JSON.stringify({ on: !audio.paused, t: audio.currentTime }));
+      } catch (e) {}
+    }
+
+    function resume() {
+      var s = null;
+      try { s = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
+      if (!s || !s.on) return;
+      function go() {
+        if (s.t) audio.currentTime = s.t;
+        var p = audio.play();
+        if (p && p.then) {
+          p.then(function () { label(true); }).catch(function () { label(false); });
+        }
+      }
+      if (audio.readyState >= 1) go();
+      else audio.addEventListener("loadedmetadata", go, { once: true });
+    }
+
+    btn.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play().then(function () { label(true); save(); });
+      } else {
+        audio.pause();
+        label(false);
+        save();
+      }
+    });
+
+    audio.addEventListener("timeupdate", save);
+    window.addEventListener("pagehide", save);
+    resume();
+  })();
+</script>
+<a id="backBtn" href="./index.html">← Về bó hoa</a>
+<style>
+  #backBtn {
+    position: fixed;
+    z-index: 9999;
+    padding: 10px 16px;
+    border: 1px solid rgba(160, 70, 100, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #7a3550;
+    font-size: 14px;
+    text-decoration: none;
+  }
+</style>
 </body>
 </html>
