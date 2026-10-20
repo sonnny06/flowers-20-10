@@ -71,11 +71,12 @@ const ROSE_PALETTES = {
 const WHISPER_NOTES = [
   'Chúc em một ngày 20/10 ngập tràn yêu thương và những bất ngờ nho nhỏ.',
   'Mong em luôn được lắng nghe, trân trọng và yêu thương theo cách mình xứng đáng.',
-  'Chúc em đủ bình yên để nghỉ ngơi, đủ tự tin để theo đuổi điều mình thích.',
+  'Chúc em đủ khoảng không để nghỉ ngơi, đủ tự tin để theo đuổi điều mình thích.',
   'Một bông hoa dành cho nụ cười của em. Hôm nay nhớ vui thật nhiều nhé!',
   'Chúc những dự định của em sớm đơm hoa, từng chút một, theo nhịp của riêng mình.',
-  'Mong mỗi ngày của em đều có một lý do thật nhỏ để mỉm cười.',
+  'Mong ngày nào mở mắt ra em cũng lụm được một lý do siêu đáng yêu để cười cả ngày!.',
   'Chúc em luôn khỏe mạnh, an yên và có thật nhiều thời gian cho chính mình.'
+  `Mong em lúc nào cũng được cưng chiều hết nấc, nói gì cũng có người nghe và luôn được yêu thương chuẩn 10/10!`
 ];
 
 /**
