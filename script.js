@@ -75,8 +75,8 @@ const WHISPER_NOTES = [
   'Một bông hoa dành cho nụ cười của em. Hôm nay nhớ vui thật nhiều nhé!',
   'Chúc những dự định của em sớm đơm hoa, từng chút một, theo nhịp của riêng mình.',
   'Mong ngày nào mở mắt ra em cũng lụm được một lý do siêu đáng yêu để cười cả ngày!.',
-  'Chúc em luôn khỏe mạnh, an yên và có thật nhiều thời gian cho chính mình.'
-  `Mong em lúc nào cũng được cưng chiều hết nấc, nói gì cũng có người nghe và luôn được yêu thương chuẩn 10/10!`
+  'Chúc em luôn khỏe mạnh, an yên và có thật nhiều thời gian cho chính mình.',
+  'Mong em lúc nào cũng được cưng chiều hết nấc, nói gì cũng có người nghe và luôn được yêu thương chuẩn 10/10!',
 ];
 
 /**
