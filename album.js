@@ -60,11 +60,11 @@
       const file = input.files[0];
       if (!file || busy) return;
       if (!file.type.startsWith('image/')) {
-        status.textContent = 'Bạn chọn một tệp ảnh nhé (JPG, PNG hoặc WebP).';
+        status.textContent = 'em chọn một tệp ảnh nhé (JPG, PNG hoặc WebP).';
         return;
       }
       if (file.size > MAX_FILE_SIZE) {
-        status.textContent = 'Ảnh quá lớn. Bạn chọn ảnh nhỏ hơn hoặc bằng 20 MB nhé.';
+        status.textContent = 'Ảnh quá lớn. em chọn ảnh nhỏ hơn hoặc bằng 20 MB nhé.';
         return;
       }
       busy = true;
@@ -81,11 +81,11 @@
           localStorage.setItem(key, data);
           status.textContent = `Đã lưu ảnh thứ ${index + 1}.`;
         } catch {
-          status.textContent = 'Đã thay ảnh. Trình duyệt chưa lưu được ảnh để dùng lần sau; bạn có thể giải phóng bộ nhớ rồi chọn lại ảnh.';
+          status.textContent = 'Đã thay ảnh. Trình duyệt chưa lưu được ảnh để dùng lần sau; em có thể giải phóng bộ nhớ rồi chọn lại ảnh.';
         }
       } catch {
         photo.src = previous;
-        status.textContent = 'Chưa đọc được ảnh này. Bạn thử ảnh JPG, PNG hoặc WebP khác nhé.';
+        status.textContent = 'Chưa đọc được ảnh này. em thử ảnh JPG, PNG hoặc WebP khác nhé.';
       } finally {
         busy = false;
         change.disabled = false;
